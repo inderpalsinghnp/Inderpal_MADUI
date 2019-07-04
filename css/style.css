@@ -8,7 +8,7 @@
 }
 
 html{
-    font-size: 10px;
+    font-size: 4px;
 }
 
 body{
@@ -44,7 +44,7 @@ body{
 
 .container{
     /* width: 100%; */
-    width: 1140px;
+    width: 114rem;
     padding: 0 15px;
     margin: 0 auto;
 }
@@ -237,8 +237,6 @@ input{
 
 textarea{
     width:100%;
-    resize:none;
-    outline:0;
 }
 
 .section-4>div>div:last-child>form>div>input{
@@ -285,36 +283,41 @@ footer>div>div>div{
     justify-content: space-between;
     align-content: center;
 }
-/* 
+
 @media (min-width: 576px) {
-    .container {
-      max-width: 540px;
+   
+    html{
+        font-size: 5.5px;
     }
+
 }
   
   @media (min-width: 768px) {
-    .container {
-      max-width: 720px;
+   
+    html{
+        font-size: 7px;
     }
+
   }
   
   @media (min-width: 992px) {
-    .container {
-      max-width: 960px;
+
+    html{
+        font-size: 8.5px;
     }
+    
   }
   
   @media (min-width: 1200px) {
-    .container {
-      max-width: 1140px;
+    html{
+        font-size: 10px;
     }
-  } */
+  }
 
   @media (max-width: 1200px){
       
 header,footer,main,#secbase,.banner{
-    width:1140px;
-
+    width:114rem;
 }
 }
 
