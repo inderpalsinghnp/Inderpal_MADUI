@@ -237,6 +237,7 @@ input{
 
 textarea{
     width:100%;
+    resize:none;
 }
 
 .section-4>div>div:last-child>form>div>input{
