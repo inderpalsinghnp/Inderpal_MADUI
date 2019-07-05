@@ -343,11 +343,14 @@
                     var newsize = x / 120;
                     var newsize = newsize + "px";
                     $(":root").css("font-size", newsize);
-                    y = x;
-                 
                 }
+                else{
+                    $(":root").css("font-size", "10px");
+                }
+                y = x;
             }
         }
+
 
         $(document).ready(func1());
 
