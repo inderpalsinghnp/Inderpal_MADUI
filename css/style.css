@@ -316,6 +316,18 @@ header,footer,main,#secbase,.banner{
 }
 } */
 
+
+@media (min-width: 1200px){
+
+    html{
+        font-size: 10px;
+    }
+    
+    header,footer,main,#secbase,.banner{
+        width:114rem;
+    }
+}
+
 .task2{
     position: fixed;
     top:100%;
