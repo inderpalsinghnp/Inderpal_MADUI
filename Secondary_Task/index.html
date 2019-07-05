@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body onresize="func1()">
 
     <header>
         <div>
@@ -146,6 +146,49 @@
             </div>
         </div>
     </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        var normal = 10;
+        normal = normal + "px";
+        var y = 0;
+
+        function checkfunc() {
+            var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            var element = document.getElementById('text');
+            if (isMobile) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        function func1() {
+            var x = $(window).width();
+            if (x != y) {
+                if (x < 1200) {
+                    if (checkfunc()) {
+                        var newsize = x / 120;
+                        var newsize = newsize + "px";
+                        $(":root").css("font-size", newsize);
+                    }
+                    else {
+                        $(":root").css("font-size", normal);
+                        $("header,footer").css("width","1200px")
+                    }
+
+                }
+                else {
+                    $(":root").css("font-size", normal);
+                    $("header,footer").css("width","100%");
+                }
+                y = x;
+            }
+
+        }
+        $(document).ready(func1());
+    </script>    
+
 </body>
 
 </html>
