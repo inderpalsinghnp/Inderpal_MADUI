@@ -334,23 +334,25 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
-
+        var normal=10;
+        normal = normal +"px";
         var y = 0;
         function func1() {
             var x = $(window).width();
-            if (x < 1200) {
-                if (x != y) {
+            if (x!=y) {
+                if (x < 1200) {
                     var newsize = x / 120;
                     var newsize = newsize + "px";
                     $(":root").css("font-size", newsize);
                 }
                 else{
-                    $(":root").css("font-size", "10px");
+                    alert(x);
+                    $(":root").css("font-size", normal);
                 }
+                
                 y = x;
             }
         }
-
 
         $(document).ready(func1());
 
