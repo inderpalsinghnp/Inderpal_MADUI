@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body onresize="func1()">
 
     <header class="bg-custom">
         <div class="container">
@@ -23,7 +23,8 @@
                     <li><a href="#">Testimonials</a></li>
                     <li><a href="#">Pricing</a></li>
                     <li><a href="#">Articles</a></li>
-                    <li><a href="#" class="myfont-bold color-white">Hire me &nbsp; <i class="fas fa-arrow-right"></i></a></li>
+                    <li><a href="#" class="myfont-bold color-white">Hire me &nbsp; <i
+                                class="fas fa-arrow-right"></i></a></li>
                 </ul>
             </nav>
         </div>
@@ -327,8 +328,32 @@
 
     <div class="task2">
         <a href="Secondary_Task/index.html" class="myfont-14 bg-khaki a-button">SECONDARY TASK&nbsp; <i
-            class="fas fa-arrow-right myfont-18"></i></a>
+                class="fas fa-arrow-right myfont-18"></i></a>
     </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+
+        var y = 0;
+        function func1() {
+            var x = $(window).width();
+            if (x < 1200) {
+                if (x != y) {
+                    var newsize = x / 120;
+                    var newsize = newsize + "px";
+                    $(":root").css("font-size", newsize);
+                    y = x;
+                 
+                }
+            }
+        }
+
+        $(document).ready(func1());
+
+        // $(window).on('resize',func1());
+    </script>
+
 </body>
 
 </html>
